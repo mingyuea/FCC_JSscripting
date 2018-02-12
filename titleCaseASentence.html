@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var exm="sHoRt AnD sToUt";
+            
+            function titleCase(str) {
+                var words=str.split(" ");
+                var caps=[];
+                for(j=0;j<words.length;j++){
+                    caps.push(words[j][0].toUpperCase());
+                }
+                
+                for(i=0;i<words.length;i++){
+                    words[i]=words[i].substring(1).toLowerCase();
+                }
+                
+                for(k=0;k<words.length;k++){
+                    words[k]=caps[k]+words[k];
+                }
+                var newStr = words.toString();
+                newStr=newStr.replace(/,/g, " ");
+                return newStr;
+            }
+            
+            console.log(titleCase(exm));
+        </script>
+    </body>
+</html>

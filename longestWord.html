@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var exm="The quick brown fox jumped over the lazy dog";
+            function findLongestWord(str) {
+                var words=str.split(" ");
+                var longest=words[0].length;
+                
+                for(i=1;i<words.length;i++){
+                    if(longest<words[i].length){
+                        longest=words[i].length;
+                    }
+                }
+                
+                return longest;
+            }
+        </script>
+    </body>
+    
+</html>

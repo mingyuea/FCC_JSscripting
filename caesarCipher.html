@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function rot13(str) { // Creates a shifting Caeser cipher using ROT13 cipher, rotating all letters by 13 places 
+                var tmpArr=[];
+                for(i=0;i<str.length;i++){
+                    if(str.charCodeAt(i)>64 && str.charCodeAt(i)<91){
+                        tmpArr.push(str.charCodeAt(i)+13);
+                    }
+                    else{
+                        tmpArr.push(str.charCodeAt(i));
+                    }
+                }
+                for(i=0;i<tmpArr.length;i++){
+                    if(tmpArr[i]>90){
+                        tmpArr[i]=64+(tmpArr[i]-90);
+                    }
+                }
+                var msg=String.fromCharCode(...tmpArr);
+                return msg;
+            }
+            console.log(rot13("SERR CVMMN!"));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function uniteUnique(arr) {
+                var argArr=Array.from(arguments);
+                var flatten = argArr.reduce((a,b) => a.concat(b),[]);
+                var newArr=argArr[0];
+                for(i=0;i<flatten.length;i++){
+                    if(newArr.indexOf(flatten[i])==-1){
+                        newArr.push(flatten[i]);
+                    }
+                }
+                arr=newArr;
+                return arr;
+            }
+            console.log(uniteUnique([1, 3, 2], [1, [5]], [2, [4]])); 
+        </script>
+    </body>
+</html>

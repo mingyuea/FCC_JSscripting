@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function diffArray(arr1, arr2) {
+                // Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both
+                var newArr = [];
+                var arrCom=arr1.concat(arr2);
+                
+                for(i=0;i<arrCom.length;i++){
+                    if(arrCom.indexOf(arrCom[i])==arrCom.lastIndexOf(arrCom[i])){
+                        newArr.push(arrCom[i]);
+                    }
+                }
+                return newArr;
+            }
+            console.log(diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]));
+        </script>
+    </body>
+</html>

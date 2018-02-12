@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function palindrome(str) {
+                  var mismatch=0;
+
+                  var patt1 = /([^a-z|0-9])/gi;
+                  var tmpStr=str.replace(patt1,"");
+                  var newStr=tmpStr.toLowerCase();
+                  console.log(newStr);
+                  var stEnd=newStr.length;
+
+                  for(i=0;i<stEnd;i++){
+                    if (newStr[i] !== newStr[stEnd-1-i]){
+                      mismatch++;
+                      console.log(mismatch);
+                    }
+                  }
+
+                  if(mismatch>0){
+                    return false;
+                  }
+                  else{
+                    return true;
+                  }
+                }
+        </script>
+    </body>
+    
+</html>

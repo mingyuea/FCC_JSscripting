@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function destroyer(arr) {
+                // Remove all the values from the first part of the argument as specified in the following arguments
+                var remNum=[];
+                for(i=1;i<arguments.length;i++){
+                    remNum.push(arguments[i]);
+                }
+                return arr.filter(function(elem){return remNum.indexOf(elem)==-1;});
+            }
+            
+            console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+        </script>
+    </body>
+</html>

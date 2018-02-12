@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function whatIsInAName(collection, source) {
+                // a function that looks through an array of objects (first argument) and returns an array of all objects that have matching property and value pairs (second argument).
+                var arr = [];
+                // Only change code below this line
+                for(i=0;i<collection.length;i++){
+                    var matchCount=0
+                    for(x in source){
+                        if(collection[i].hasOwnProperty(source[x])){
+                            console.log(collection[i]);
+                            matchCount++;
+                        }
+                    }
+                    if(matchCount==source.length){
+                        arr.push(collection[i]);
+                        break;
+                    }
+                }
+                
+                // Only change code above this line
+                return arr;
+            }
+            console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+        </script>
+    </body>
+</html>

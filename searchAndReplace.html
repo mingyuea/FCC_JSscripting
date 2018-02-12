@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function myReplace(str, before, after) {
+                var newWord;
+                if(before.charCodeAt(0)>=97){
+                    newWord=after.charAt(0).toLowerCase().concat(after.substring(1));
+                    console.log(newWord);
+                }
+                else{
+                    newWord=after.charAt(0).toUpperCase().concat(after.substring(1));
+                }
+                str=str.replace(before, newWord);
+                return str;
+            }
+            console.log(myReplace("His name is Tom", "Tom", "john"));
+        </script>
+    </body>
+</html>

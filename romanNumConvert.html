@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function convertToRoman(num) {
+                //converts numbers to roman numerals
+                var arabNo=[1000,900,500,400,100,90,50,40,10,9,5,4,1];
+                var romNo=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+                if(num == 0){
+                    return "";
+                }
+                for(i=0;i<arabNo.length;i++){
+                    if(arabNo[i]<=num){
+                        return romNo[i].repeat(Math.floor(num/arabNo[i]))+convertToRoman(num%arabNo[i]);
+                    }
+                }
+            }
+            console.log(convertToRoman(4));
+        </script>
+    </body>
+</html>

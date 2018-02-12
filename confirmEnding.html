@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function confirmEnding(str, target) {
+                var sampleStr=str.substr(str.length-target.length);
+                var mismatch=0;
+                
+                for(i=0;i<target.length;i++){
+                    if(sampleStr[i] !== target[i]){
+                        mismatch++;
+                    }
+                }
+                
+                if(mismatch>0){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            
+            console.log(confirmEnding("Bastian", "n"));
+        </script>
+    </body>
+</html>

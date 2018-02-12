@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function fearNotLetter(str) {
+                var k=str;
+                str=undefined;
+                for(i=1;i<k.length; i++){
+                    if(k.charCodeAt(i)-k.charCodeAt(i-1)>1){
+                        var uniNum=k.charCodeAt(i)-1;
+                        str=String.fromCharCode(uniNum);
+                    }
+                }
+                return str;
+            }
+            console.log(fearNotLetter("abcdefghjklmno"));
+               
+        </script>
+    </body>
+</html>

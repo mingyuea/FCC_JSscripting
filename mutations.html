@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function mutation(arr) {
+                var Tf=true;
+                for(j=0;j<arr.length;j++){
+                    arr[j]=(arr[j].toLowerCase());
+                }
+                console.log(arr);
+                for(i=0;i<arr[1].length;i++){
+                    if(arr[0].includes(arr[1][i]) === false){
+                        Tf=false;
+                    }
+                }
+                return Tf;
+            }
+        </script>
+    </body>
+</html>

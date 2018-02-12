@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function bouncer(arr) {
+                // Removes all falsy values from an input array
+                var falsyArr=[false, "", 0, null, undefined];
+                var newArr=arr.filter(function(elem1){return elem1 == elem1;});
+                return newArr.filter(function(elem){return falsyArr.indexOf(elem)== -1;});
+            }
+
+            console.log(bouncer([1, null, NaN, 2, undefined]));
+            
+        </script>
+    </body>
+</html>

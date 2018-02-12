@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function booWho(bool) {
+                var input=bool;
+                bool=false;
+                console.log(typeof input);
+                if(typeof input=='boolean'){
+                    bool=true;
+                }
+                return bool;
+            }
+            console.log(booWho([].slice));
+        </script>
+    </body>
+</html>

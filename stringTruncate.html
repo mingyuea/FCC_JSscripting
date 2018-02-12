@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function truncateString(str, num) {
+                var newString;
+                if(num>=str.length){
+                    newString=str;
+                }
+                else if(num >= 3){
+                    newString=str.substring(0, num-3)+"...";
+                }
+                else{
+                    newString=str.substring(0, num)+"...";
+                }
+                
+                return newString;
+            }
+            
+            console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
+        </script>
+    </body>
+</html>

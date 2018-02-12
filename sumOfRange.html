@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function sumAll(arr) {
+                arr.sort(function(a,b){return a-b;});
+                var newArr=[];
+                for(i=arr[0];i<(arr[1]+1);i++){
+                    newArr.push(i);
+                }
+                var total=newArr.reduce(function(total,num){return total+num;});
+                return total;
+            }
+            console.log(sumAll([5, 10]));
+        </script>
+    </body>
+</html>

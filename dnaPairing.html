@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function pairElement(str) {
+                function matchElem(elem){
+                    var corres="";
+                    switch(elem){
+                        case "A":
+                            corres="T";
+                            break;
+                        case "T":
+                            corres="A";
+                            break;
+                        case "C":
+                            corres="G";
+                            break;
+                        case "G":
+                            corres="C";
+                            break;
+                    }
+                    return [elem, corres];
+                }
+                
+                var pairs=[];
+                for(i=0;i<str.length;i++){
+                    pairs.push(matchElem(str[i]));
+                }
+                str=pairs;
+                return str;
+            }
+            
+            console.log(pairElement("CTCTA"));   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function getIndexToIns(arr, num) {
+                // Returns the index of which the number would be sorted into the array
+                arr.sort(function(x,y){return x-y;});
+                console.log(arr);
+                var indx=arr.length;
+                for(i=0;i<arr.length;i++){
+                    if(num>arr[i] && num<=arr[i+1]){
+                        indx=i+1;
+                    }
+                    else if(num==arr[i]){
+                        indx=i;
+                    }
+                }
+                return indx;
+            }
+            console.log(getIndexToIns([3, 10, 5], 3));
+        </script>
+    </body>
+</html>
